@@ -1,0 +1,22 @@
+{
+  "files": {
+    "app.js": "/onetappost/static/js/app.1d882154.chunk.js",
+    "app.js.map": "/onetappost/static/js/app.1d882154.chunk.js.map",
+    "runtime~app.js": "/onetappost/static/js/runtime~app.492ec9c9.js",
+    "runtime~app.js.map": "/onetappost/static/js/runtime~app.492ec9c9.js.map",
+    "static/js/2.24bb4537.chunk.js": "/onetappost/static/js/2.24bb4537.chunk.js",
+    "static/js/2.24bb4537.chunk.js.map": "/onetappost/static/js/2.24bb4537.chunk.js.map",
+    "favicon-16.png": "/onetappost/favicon-16.png",
+    "favicon-32.png": "/onetappost/favicon-32.png",
+    "favicon.ico": "/onetappost/favicon.ico",
+    "index.html": "/onetappost/index.html",
+    "manifest.json": "/onetappost/manifest.json",
+    "serve.json": "/onetappost/serve.json",
+    "static/js/2.24bb4537.chunk.js.LICENSE.txt": "/onetappost/static/js/2.24bb4537.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime~app.492ec9c9.js",
+    "static/js/2.24bb4537.chunk.js",
+    "static/js/app.1d882154.chunk.js"
+  ]
+}
