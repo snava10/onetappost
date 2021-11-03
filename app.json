@@ -28,6 +28,12 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "facebookScheme": "fb405166990987939",
+    "facebookAppId": "405166990987939",
+    "facebookDisplayName": "OneTapPost",
+    "facebookAutoLogAppEventsEnabled": true,
+    "facebookAdvertiserIDCollectionEnabled": true,
+    "facebookAutoInitEnabled": true
   }
 }
