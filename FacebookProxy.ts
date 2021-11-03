@@ -32,7 +32,8 @@ export async function logIn(): Promise<FacebookLogin> {
     } catch ({ message }) {
       alert(`Facebook Login Error: ${message}`);
       return {
-        error: message
+        error: message,
+        type: 'error'
       };
     }
   }
