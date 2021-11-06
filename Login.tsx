@@ -4,10 +4,26 @@ import { View, Text } from "react-native";
 import Icon from "react-native-vector-icons/FontAwesome";
 import { FacebookLogin, logIn } from "./FacebookProxy";
 import { styles } from "./Styles";
-import GlobalContext, { GlobalCtxContent } from "./GlobalContext";
+import GlobalContext from "./GlobalContext";
+import { useFocusEffect } from "@react-navigation/native";
 
-export default function LoginScreen({ navigation }) {
+export default function LoginScreen({ navigation } : any) {
   const [facebookLogin, setFacebookLogin] = useState({} as FacebookLogin);
+  const ctx = useContext(GlobalContext);
+  useFocusEffect(
+    React.useCallback(() => {
+      if (ctx?.facebookLogin?.user) {
+        console.log('User authenticated');
+        navigation.navigate('Media');
+      }     
+
+      return () => {
+        // Do something when the screen is unfocused
+        // Useful for cleanup functions
+      };
+    }, [])
+  );
+
   return (
     <GlobalContext.Consumer>
       {(context: any) => (
@@ -28,7 +44,9 @@ export default function LoginScreen({ navigation }) {
               }
             }}
           >Login with Facebook</Icon.Button>
-          <Text>{JSON.stringify(context.facebookLogin.user)}</Text>
+          {
+            context.facebookLogin !== undefined ? <Text>{JSON.stringify(context.facebookLogin.user)}</Text> : <Text>{JSON.stringify(context)}</Text>
+          }
           <StatusBar style="auto" />
         </View>
       )}    

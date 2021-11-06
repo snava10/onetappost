@@ -12,7 +12,9 @@ export class GlobalContextProvider extends Component {
   render() {
     return (
       <GlobalContext.Provider value={{
-        facebookLogin: {} as FacebookLogin
+        facebookLogin: {
+          user: ''          
+        } as FacebookLogin
       }}>
         {this.props.children}
       </GlobalContext.Provider>
