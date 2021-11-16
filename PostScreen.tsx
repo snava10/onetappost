@@ -9,10 +9,16 @@ export default function PostScreen({ route, navigation }: any) {
 
   const styles = StyleSheet.create({
     input: {
-      height: 40,
+      height: 100,
       margin: 12,
       borderWidth: 1,
       padding: 10,
+      textAlign: "left",
+      textAlignVertical: "top"
+    },
+    media: {
+      margin: 12,
+      height: 300
     },
   });
 
@@ -31,18 +37,29 @@ export default function PostScreen({ route, navigation }: any) {
         <View
           style={{
             flex: 1,
-            justifyContent: "space-around",
             flexDirection: "column",
-            alignContent: "center",
           }}
         >
-          <TextInput
-            style={styles.input}
-            onChangeText={onChangeText}
-            value={text}
-          />
-          <Image source={{ uri: uri }} style={{ width: 200, height: 200 }} />
-          <View>
+          <View
+            style={{
+              flex: 0.9,
+            }}
+          >
+            <TextInput
+              style={styles.input}
+              onChangeText={onChangeText}
+              value={text}
+              multiline={true}
+              placeholder="What's on your mind?"
+            />
+            <Image source={{ uri: uri }} style={styles.media} resizeMethod='auto' resizeMode='center' />
+          </View>
+          <View
+            style={{
+              flexDirection: "row",
+              justifyContent: "space-evenly",
+            }}
+          >
             <Button title="Discard" onPress={discard} />
             <Button title="Post" onPress={post} />
           </View>
