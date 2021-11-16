@@ -1,5 +1,4 @@
 import * as Facebook from "expo-facebook";
-import React from "react";
 
 export interface FacebookLogin {
   facebookLoginResult?: Facebook.FacebookLoginResult;

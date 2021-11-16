@@ -7,14 +7,14 @@ import { styles } from "./Styles";
 import GlobalContext from "./GlobalContext";
 import { useFocusEffect } from "@react-navigation/native";
 
-export default function LoginScreen({ navigation } : any) {
+export default function LoginScreen({ navigation }: any) {
   const ctx = useContext(GlobalContext);
   useFocusEffect(
     React.useCallback(() => {
       if (ctx?.facebookLogin?.user) {
-        console.log('User authenticated');
-        navigation.navigate('Post');
-      }     
+        console.log("User authenticated");
+        navigation.navigate("Post");
+      }
 
       return () => {
         // Do something when the screen is unfocused
@@ -38,17 +38,21 @@ export default function LoginScreen({ navigation } : any) {
               // context.setUser(fbLogin.user);
               context.facebookLogin = fbLogin;
               // console.log(context.user);
-              if (fbLogin.type === 'success') {
-                navigation.navigate('Post');
+              if (fbLogin.type === "success") {
+                navigation.navigate("Post");
               }
             }}
-          >Login with Facebook</Icon.Button>
-          {
-            context.facebookLogin !== undefined ? <Text>{JSON.stringify(context.facebookLogin.user)}</Text> : <Text>{JSON.stringify(context)}</Text>
-          }
+          >
+            Login with Facebook
+          </Icon.Button>
+          {context.facebookLogin !== undefined ? (
+            <Text>{JSON.stringify(context.facebookLogin.user)}</Text>
+          ) : (
+            <Text>{JSON.stringify(context)}</Text>
+          )}
           <StatusBar style="auto" />
         </View>
-      )}    
+      )}
     </GlobalContext.Consumer>
   );
 }

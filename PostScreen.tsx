@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { View, Image, StyleSheet, Button, Platform } from "react-native";
 import { TextInput } from "react-native-gesture-handler";
 import GlobalContext from "./GlobalContext";
