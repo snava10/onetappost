@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { StatusBar } from "expo-status-bar";
 import { View, Text } from "react-native";
 import Icon from "react-native-vector-icons/FontAwesome";
@@ -8,7 +8,6 @@ import GlobalContext from "./GlobalContext";
 import { useFocusEffect } from "@react-navigation/native";
 
 export default function LoginScreen({ navigation } : any) {
-  const [facebookLogin, setFacebookLogin] = useState({} as FacebookLogin);
   const ctx = useContext(GlobalContext);
   useFocusEffect(
     React.useCallback(() => {
