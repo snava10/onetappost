@@ -13,7 +13,7 @@ export default function LoginScreen({ navigation } : any) {
     React.useCallback(() => {
       if (ctx?.facebookLogin?.user) {
         console.log('User authenticated');
-        navigation.navigate('Media');
+        navigation.navigate('Post');
       }     
 
       return () => {
@@ -39,7 +39,7 @@ export default function LoginScreen({ navigation } : any) {
               context.facebookLogin = fbLogin;
               // console.log(context.user);
               if (fbLogin.type === 'success') {
-                navigation.navigate('Media');
+                navigation.navigate('Post');
               }
             }}
           >Login with Facebook</Icon.Button>

@@ -13,7 +13,6 @@ export default function App() {
       <NavigationContainer>
         <Stack.Navigator initialRouteName="Login">
           <Stack.Screen name="Login" component={LoginScreen} options={{ title: 'One Tap Post' }}/>
-          <Stack.Screen name="Media" component={MediaScreen} options={{ title: 'One Tap Post' }}/>
           <Stack.Screen name="Post" component={PostScreen} />
         </Stack.Navigator>
       </NavigationContainer>
