@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Button, Image, View, Platform, Pressable, Text } from "react-native";
+import { Button, View, Platform } from "react-native";
 import * as ImagePicker from "expo-image-picker";
 import GlobalContext from "./GlobalContext";
 
@@ -28,7 +28,7 @@ export default function MediaScreen({ navigation }: any) {
     console.log(result);
 
     if (!result.cancelled) {
-      setImage(result.uri);
+      navigation.navigate('Post', { uri: result.uri });
     }
   };
 
@@ -41,7 +41,7 @@ export default function MediaScreen({ navigation }: any) {
     console.log(result);
 
     if (!result.cancelled) {
-      setImage(result.uri);
+      navigation.navigate('Post', { uri: result.uri });
     }
   };
 
