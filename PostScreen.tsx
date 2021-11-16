@@ -21,7 +21,7 @@ export default function PostScreen({ navigation }: any) {
   }, []);
 
   const pickImage = async () => {
-    const result = await ImagePicker.launchImageLibraryAsync({
+    const result: any = await ImagePicker.launchImageLibraryAsync({
       mediaTypes: ImagePicker.MediaTypeOptions.All,
       allowsEditing: true,
       quality: 1,
@@ -35,7 +35,7 @@ export default function PostScreen({ navigation }: any) {
   };
 
   const launchCamera = async (mediaType: ImagePicker.MediaTypeOptions) => {
-    const result = await ImagePicker.launchCameraAsync({
+    const result: any = await ImagePicker.launchCameraAsync({
       mediaTypes: mediaType,
       videoMaxDuration: 0,
     });
